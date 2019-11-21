@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.ControlPage2">
+    <ContentPage.Content>
+        <StackLayout Padding="20" BackgroundColor="Gold">
+           
+
+            <Label FontSize="40" FontAttributes="Bold"
+                Text="{Binding Source={x:Reference swi},
+                Path=IsToggled, StringFormat='Switch is {0}'}"
+                   IsVisible="{Binding Source={x:Reference swi}, Path=IsToggled}"></Label>
+            
+            <Switch x:Name="swi" HorizontalOptions="StartAndExpand"
+                    Toggled="Swi_Toggled"></Switch>
+            
+            <Label x:Name="lblswi" 
+                Text="Turn switch to change color"></Label>
+
+           <!--Could also use Label BindingContext ={Binding Source={x:Reference stepper}}-->
+            <!--You would also use {Binding Value} in the controls-->
+            <Label Text="{Binding Source={x:Reference stepper}, Path=Value}"
+                   FontSize="30" FontAttributes="Bold" Rotation="{Binding Source={x:Reference stepper},
+                   Path=Value}"></Label>
+            
+            <Stepper x:Name="stepper" Minimum="2" Maximum="100" Increment="2"></Stepper>
+            
+            <Slider Maximum="360" Minimum="20"></Slider>
+
+            <Entry x:Name="txtusername" Placeholder="UserName" Completed="Txtusername_Completed"></Entry>
+            <!--This will change entries to asterisks-->
+            <Entry x:Name="txtpassword" 
+                  Placeholder="Password" IsPassword="True"
+                  Keyboard="Numeric" TextChanged="Txtpassword_TextChanged"></Entry>
+
+            <Label x:Name="lblusername"></Label>
+            <Label x:Name="lblpassword"></Label>
+
+            <!--editor will automatically let the content scroll-->
+            <Editor BackgroundColor="Aqua" x:Name="txteditor" 
+                    Placeholder="Tell me about yourself" VerticalOptions="FillAndExpand"></Editor>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

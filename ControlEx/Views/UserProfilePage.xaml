@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.UserProfilePage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Start" Padding="10" Spacing="5">
+            <Label Text="{Binding UserName}" />
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
+                <Label Text="{Binding UserName}"></Label>
+                <Label Text="{Binding Description}"></Label>
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="10">
+                    <Image Source="{Binding Image}" ></Image>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

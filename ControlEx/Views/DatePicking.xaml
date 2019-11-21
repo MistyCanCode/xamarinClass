@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.DatePicking"
+             xmlns:sys="clr-namespace:System;assembly=netstandard">
+    <ContentPage.Content>
+        <StackLayout  Padding="10" BackgroundColor="Lavender">
+            <DatePicker x:Name="startdate" MinimumDate="{x:Static sys:DateTime.Today}" MaximumDate="12/31/2019"></DatePicker>
+
+            <Image x:Name="cal" Source="calendar.png" Aspect="AspectFit" HeightRequest="20" WidthRequest="20">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+       
+      
+            <DatePicker x:Name="enddate" MinimumDate="{x:Binding Source={x:Reference startdate}, Path=Date}" MaximumDate="12/31/2019"></DatePicker>
+            <!--Automatically does 24 hour format, but will display as 12 hour format, 13:00 will display as 1:00-->
+            <TimePicker Time="13:00:00"></TimePicker>
+
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="timebetween" Text="Time Between"  BackgroundColor="AntiqueWhite" TextColor="DarkViolet"></Button>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="timeElapsed" VerticalTextAlignment="Center" Text="{Binding Source=Time}" BackgroundColor="DarkViolet" TextColor="AntiqueWhite"></Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

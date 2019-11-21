@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.MasterPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage>
+            <StackLayout>
+                <SearchBar Placeholder="Search Here"
+                       PlaceholderColor="Blue"
+                       TextChanged="SearchBar_TextChanged"></SearchBar>
+
+                <ListView x:Name="listview" 
+                      HasUnevenRows="True"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="Listview_Refreshing"
+                      SeparatorColor="Red"
+                      ItemTapped="Listview_ItemTapped"
+                      ItemSelected="Listview_ItemSelected">
+                    <!--IsGroupingEnabled="True"
+                    GroupDisplayBinding="{Binding Title}"
+                    GroupShortNameBinding="{Binding ShortName}"-->
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}" Detail="{Binding Details}"></TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage/>
+    </MasterDetailPage.Detail>
+   
+</MasterDetailPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.TableViewProject">
+    <ContentPage.Content>
+        <TableView x:Name="tableview" Intent="Form">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell>
+                        <Label Text="Basics" FontSize="Medium" TextColor="Red"></Label>
+                    </ViewCell>
+                    <ViewCell>
+                        <Label Text="Name" FontSize="Medium" TextColor="Red" ></Label>
+                    </ViewCell>
+                    <ViewCell>
+                        <Entry Placeholder="Enter Name" FontSize="Medium"></Entry>
+                    </ViewCell>
+                    <ViewCell>
+                        <Label Text="Title" FontSize="Medium" TextColor="Gray"></Label>
+                    </ViewCell>
+                    <ViewCell>
+                        <Entry Placeholder="(Event Name)" FontSize="Medium"></Entry>
+                    </ViewCell>
+                    <ViewCell>
+                        <Label Text="Location" FontSize="Medium" TextColor="Gray"></Label>
+                    </ViewCell>
+                    <ViewCell>
+                        <Entry Placeholder="(Place)" FontSize="Medium"></Entry>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label x:Name="lblswi" Text="Notifications"></Label>
+                            <Switch x:Name="swi" HorizontalOptions="EndAndExpand"
+                                    Toggled="Swi_Toggled"></Switch>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <Label Text="Timings" TextColor="Red"></Label>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Start" TextColor="Gray"></Label>
+                            <DatePicker x:Name="startdate" MinimumDate="1-1-2018" MaximumDate="12-31-2020" Date="{Binding SelectDate}"></DatePicker>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="End" TextColor="Gray"></Label>
+                            <DatePicker x:Name="enddate" MinimumDate="1-1-2018" MaximumDate="12-31-2020" Date="{Binding SelectDate}"></DatePicker>
+                        </StackLayout>
+                    </ViewCell>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                                <Label Text="Contact Method" TextColor="Gray"></Label>
+                                <Picker x:Name="contact" ItemDisplayBinding="{Binding Name}"
+                                     Title="Contact Method" BackgroundColor="White"
+                                     SelectedIndexChanged="Contact_SelectedIndexChanged">
+                                    <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        <x:String>None</x:String>
+                                        <x:String>SMS</x:String>
+                                        <x:String>Email</x:String>
+                                    </x:Array>
+                                </Picker.ItemsSource> </Picker>
+                            </StackLayout>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.TabbedPageEx"
+             xmlns:local="clr-namespace:ControlEx">
+  <!--Pages can be added as references or inline-->
+    <NavigationPage Title="Welcome">
+        <x:Arguments>
+            <local:WelcomePage/>
+        </x:Arguments>
+    </NavigationPage>
+   <!-- <local:WelcomePage/>--><!--This isn't needed if you use the x:arguments<local:WelcomePage>-->
+    <!--This is the in line pages-->
+    <ContentPage Title="Tab 1">
+        <Label Text="Tab 1" BackgroundColor="White"></Label>
+    </ContentPage>
+    <ContentPage Title="Tab 2" Icon="calendar.png">
+        <Label Text="Tab 2"></Label>
+    </ContentPage>
+    <ContentPage Title="Tab 3" BackgroundColor="Aqua">
+        <Label Text="Tab 3"></Label>
+    </ContentPage>
+</TabbedPage>

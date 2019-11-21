@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.PickerPage1">
+    <ContentPage.Content>
+        <StackLayout Padding="20" BackgroundColor="DarkSeaGreen">
+            <Picker x:Name="picker"
+                    ItemDisplayBinding="{Binding Name}"
+                    Title="Pick a Fruit" BackgroundColor="Aqua"
+                    SelectedIndexChanged="Picker_SelectedIndexChanged">
+              <!--  <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Apple</x:String>
+                    <x:String>Mango</x:String>
+                    <x:String>Bananas</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>-->
+            </Picker>
+            <Label x:Name="lblName" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Image x:Name="imgurl" HeightRequest="100" WidthRequest="100"></Image>
+            <Label x:Name="lblDetails" FontSize="20" FontAttributes="Italic"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

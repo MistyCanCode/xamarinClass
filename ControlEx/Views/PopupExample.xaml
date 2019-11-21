@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.PopupExample">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="calendar.png" Text="New" Activated="ToolbarItem_Activated" Order="Primary"></ToolbarItem>
+        <ToolbarItem Text="New" Activated="ToolbarItem_Activated" Order="Secondary"></ToolbarItem>
+        <ToolbarItem Text="Edit" Activated="ToolbarItem_Activated_1" Order="Secondary"></ToolbarItem>
+        <ToolbarItem Text="Update" Activated="ToolbarItem_Activated_2" Order="Secondary"></ToolbarItem>
+        
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Button Text="Click me" Clicked="Button_Clicked"
+                    TextColor="CadetBlue" BackgroundColor="Transparent"
+                     VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="Send" Text="Send As" Clicked="Send_Clicked"
+                    BackgroundColor="Transparent" TextColor="CadetBlue"></Button>
+            <!--This buttoon is to geterate button action sheet-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

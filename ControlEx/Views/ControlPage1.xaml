@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.ControlPage1">
+    <ContentPage.Content>
+        <StackLayout BindingContext="{x:Reference slider}">
+            <BoxView WidthRequest="60" HeightRequest="70"
+                     BackgroundColor="Red"
+                     Opacity="{Binding Value}">
+            </BoxView>
+            <Label FontSize="{Binding Value}" FontAttributes="Bold" BackgroundColor="Aqua"
+                   x:Name="lblwelcome" TextColor="Black"
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"
+                    Text="{Binding Value, StringFormat='Value is: {0}'}"
+                   Rotation="{Binding Value}"></Label>
+
+            <Slider x:Name="slider" Minimum="0" Maximum="360"
+                    MinimumTrackColor="Blue"></Slider>
+                    
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

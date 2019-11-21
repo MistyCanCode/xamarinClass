@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.CarouselPageEx"
+             xmlns:local="clr-namespace:ControlEx.Views"
+                  BackgroundColor="White">
+    <local:TableViewProject></local:TableViewProject>
+        <ContentPage BackgroundColor="CadetBlue" HeightRequest="100" WidthRequest="100">
+        <Label Text="Page 1" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+    </ContentPage>
+    <ContentPage BackgroundColor="Chocolate" HeightRequest="120" WidthRequest="120">
+        <Label Text="Page 2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+    </ContentPage>
+    <ContentPage BackgroundColor="Black" HeightRequest="150" WidthRequest="150">
+        <Label Text="Page 3" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+    </ContentPage>
+</CarouselPage>

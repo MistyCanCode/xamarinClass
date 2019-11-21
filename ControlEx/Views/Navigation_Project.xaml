@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ControlEx.Views.Navigation_Project"
+             xmlns:local="clr-namespace:ControlEx"
+             xmlns:local1="clr-namespace:ControlEx.Views">
+   <!-- xmlns:local2="clr-namespace:ControlEx.Views"-->
+
+    <NavigationPage Title="Activities" Icon="activityicon.png">
+        <x:Arguments>
+            <local1:ActivitiesPage>
+                <Label Text="ACTIVITIES" BackgroundColor="Blue"></Label>
+            </local1:ActivitiesPage>
+        </x:Arguments>
+        <x:Arguments>
+            <local1:ProfilePage>
+                <Label Text="PROFILE" BackgroundColor="Blue"></Label>
+            </local1:ProfilePage>
+        </x:Arguments>
+    </NavigationPage>
+    <!--Pages can be added as references or inline-->
+  <!--  <ContentPage Title="Activities" Icon="activityicon.png">
+        <Label Text="ACTIVITES" BackgroundColor="Blue" ></Label>
+    </ContentPage>
+    <ContentPage Title="Profile" Icon="usericon.png">
+        <Label Text="PROFILE" BackgroundColor="Blue"></Label>
+    </ContentPage>-->
+    <!-- <ContentPage Title="Tab 3" />-->
+</TabbedPage>
